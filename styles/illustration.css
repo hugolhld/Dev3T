@@ -1,0 +1,61 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html, header{
+    height: 95%
+}
+
+header{
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+    position: fixed;
+    background: #FFF;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu__contains{
+    margin: 0 auto;
+}
+
+.menu__logo{
+    font-size: .9em;
+}
+
+.menu__logo img{
+    margin: 0 60px;
+    width: 50px;
+    height: auto;
+}
+
+.menu__link ul{
+    padding: 10px;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
+
+.menu__link ul li{
+    padding: 0 10px;
+    margin: 0 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.menu__link:nth-child(1) ul li:nth-child(2){
+    margin: -5px 20px !important;
+}
