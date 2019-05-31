@@ -21,6 +21,7 @@ nav{
     padding-top: 10px;
     position: fixed;
     background: #FFF;
+    z-index: 10;
 }
 
 a{
@@ -60,6 +61,11 @@ a{
     margin: -5px 20px !important;
 }
 
+.menu__link ul li a:hover {
+    color: #7f8c8d;
+    transition: .3s
+}
+
 .background{
     height: 100%;
     background: url(../images/backgroundResize.png) no-repeat;
@@ -79,6 +85,18 @@ a{
     font-size: 1.2em;
     text-align: start;
     line-height: 1.8em;
+}
+
+.first__cursor{
+    opacity: 1;
+    animation: blink 0.7s  infinite;
+    -webkit-animation: blink 0.4s infinite
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
 
 .second__project{
@@ -107,6 +125,13 @@ a{
 .object{
     width: 23.23%;
     margin: 45px;
+    filter: blur(2px);
+}
+
+.object:hover{
+    transform: scale(1.1);
+    transition: .4s ease-in;
+    filter: blur(0);
 }
 
 .object img{

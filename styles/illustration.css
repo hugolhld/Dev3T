@@ -19,7 +19,6 @@ nav{
     padding: 0;
     margin: 0;
     padding-top: 10px;
-    position: fixed;
     background: #FFF;
 }
 
@@ -59,3 +58,13 @@ a{
 .menu__link:nth-child(1) ul li:nth-child(2){
     margin: -5px 20px !important;
 }
+
+.home__slider{
+    width: 100%;
+    height: 100%;
+}
+
+.first__title{
+    margin: 30px;
+}
+
