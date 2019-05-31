@@ -12,3 +12,4 @@ function typing(){
         setTimeout(typing,30)
     }
 }
+

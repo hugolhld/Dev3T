@@ -4,10 +4,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body, html, header{
-    height: 95%
-}
-
 header{
     width: 100%;
     margin: 0 auto;
@@ -20,6 +16,8 @@ nav{
     margin: 0;
     padding-top: 10px;
     background: #FFF;
+    z-index: 10;
+    top: 0;
 }
 
 a{
@@ -33,6 +31,10 @@ a{
 
 .menu__logo{
     font-size: .9em;
+}
+
+.menu__logo p {
+    margin: 0
 }
 
 .menu__logo img{
@@ -59,6 +61,15 @@ a{
     margin: -5px 20px !important;
 }
 
+.menu__link ul li a:hover {
+    color: #7f8c8d;
+    transition: .3s
+}
+
+.active{
+    color: #7f8c8d;
+}
+/* SLIDER */
 .home__slider{
     width: 100%;
     height: 100%;
@@ -68,3 +79,47 @@ a{
     margin: 30px;
 }
 
+.slider__content{
+    display: flex;
+    height: 100%;
+}
+
+.slider{
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.sliderContainer{
+    display:flex;
+    flex-wrap: nowrap;
+    transition: all ease-in 1s;
+}
+
+.slider__image{
+    width: 940px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.slider__image img{
+    width: 100%;
+}
+
+.arrowPrevious{
+    margin-top: 10%;
+    font-size: 10em;
+    display: none;
+}
+
+.arrowNext{
+    margin-top: 10%;
+    font-size: 10em;
+    display: none;
+}
+
+.is-visible{
+    display: block;
+}

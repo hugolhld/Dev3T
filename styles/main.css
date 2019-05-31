@@ -22,6 +22,7 @@ nav{
     position: fixed;
     background: #FFF;
     z-index: 10;
+    top: 0;
 }
 
 a{
@@ -35,6 +36,10 @@ a{
 
 .menu__logo{
     font-size: .9em;
+}
+
+.menu__logo p {
+    margin: 0
 }
 
 .menu__logo img{
@@ -90,10 +95,10 @@ a{
 .first__cursor{
     opacity: 1;
     animation: blink 0.7s  infinite;
-    -webkit-animation: blink 0.4s infinite
+    -webkit-animation: cursor 0.4s infinite
 }
 
-@keyframes blink{
+@keyframes cursor{
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
