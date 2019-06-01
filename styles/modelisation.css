@@ -15,6 +15,7 @@ nav{
     padding: 0;
     margin: 0;
     padding-top: 10px;
+    position: fixed;
     background: #FFF;
     z-index: 10;
     top: 0;
@@ -33,14 +34,21 @@ a{
     font-size: .9em;
 }
 
+.menu__logo a{
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
 .menu__logo p {
-    margin: 0
+    margin: -5px 5px;
 }
 
 .menu__logo img{
-    margin: 0 60px;
+    margin-top: -10px;
     width: 50px;
-    height: auto;
+    height: 50px;
 }
 
 .menu__link ul{
@@ -51,14 +59,19 @@ a{
 }
 
 .menu__link ul li{
-    padding: 0 10px;
-    margin: 0 20px;
-    font-weight: bold;
+    padding: 0 30px;
+    margin: 0 40px;
     text-align: center;
+    font-weight: lighter;
 }
 
-.menu__link:nth-child(1) ul li:nth-child(2){
-    margin: -5px 20px !important;
+.menu__link ul li:nth-child(3){
+    margin: -5px 40px !important;
+}
+
+.menu__link ul li:nth-child(1){
+    margin: -5px 40px !important;
+    text-align: left;
 }
 
 .menu__link ul li a:hover {
@@ -151,25 +164,35 @@ a{
 
 /*FOOTER*/
 
+footer{
+    border: 1px solid black;
+}
+
 .foot__content{
     display: flex;
     width: 90%;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 .foot__bio{
     width: 30%;
 }
 
+.foot__bio p {
+    font-size: .8em;
+}
+
 .foot__social{
+    margin: 10px 0;
     width:20%;
     text-align: center;
     font-weight: bold;
 }
 
 .foot__logo{
+    width: 80%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -178,12 +201,12 @@ a{
 .foot__border{
     border-radius: 50%;
     border: 2px solid black;
-    padding: 20px;
-    width: 30px;
-    height: 30px;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
 }
 
 .foot__logo img{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
