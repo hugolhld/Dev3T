@@ -186,3 +186,21 @@ a{
     width: 30px;
     height: 30px;
 }
+
+.arrow{
+    width: 50px;
+    height: 39px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.up{
+    border: 2px solid black;
+    transform: rotate(45deg) ;
+}
+
+.down{
+    transform: rotate(-45deg) ;
+    border: 2px solid black;
+}
