@@ -95,11 +95,11 @@ class Slider {
 
   //Litrer slider
 
-  /*class Filter{
+  class Filter{
     constructor()
     {
       this.buttons = document.querySelectorAll('.slider__button')
-      this.slider = document.querySelectorAll('.slider')
+      this.slider = document.querySelectorAll('.home__slider')
   
       this.init()
     }
@@ -127,5 +127,5 @@ class Slider {
   
   }
   
-  let myFilter = new Filter()*/
+  let myFilter = new Filter()
   
