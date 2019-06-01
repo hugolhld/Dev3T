@@ -17,6 +17,7 @@ class Slider {
       this.init()
   
       this.hideArrow()
+      //this.filter()
     }
   
     init()
@@ -70,8 +71,61 @@ class Slider {
       }
   
     }
+
+    /*filter(){
+        this.buttons = document.querySelectorAll('.slider__button')
+        this.SliderImage = document.querySelectorAll('.slider__image')
+        for(let i = 0; i<this.buttons.length; i++){
+            this.buttons[i].addEventListener('click', ()=>{
+               let target = this.buttons[i].getAttribute('data-target') 
+               for(let j = 0; j<this.SliderImage.length; i++){
+                   
+               }
+            })
+            
+        }
+    }*/
+
   }
   
   
   let mySlide = new Slider('.slider',1)
+  let newSlide = new Slider('.slidersecond',1)
+
+
+  //Litrer slider
+
+  /*class Filter{
+    constructor()
+    {
+      this.buttons = document.querySelectorAll('.slider__button')
+      this.slider = document.querySelectorAll('.slider')
+  
+      this.init()
+    }
+  
+    init(){
+      for(let i=0; i<this.buttons.length; i++)
+      {
+        this.buttons[i].addEventListener('click', ()=>{
+          let target = this.buttons[i].getAttribute('data-target');
+  
+          for(let j=0; j< this.slider.length; j++)
+          {
+            if(this.slider[j].classList.contains(target))
+            {
+              this.slider[j].style.display= 'initial'
+              this.slider[j].classList.remove('disable')
+            }
+            else{
+              this.slider[j].style.display= 'none'
+            }
+          }
+        })
+      }
+    }
+  
+  }
+  
+  let myFilter = new Filter()*/
   

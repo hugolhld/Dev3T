@@ -9,7 +9,7 @@ function typing(){
     if(i < text.length){
         document.querySelector(".first__typed").innerHTML += text.charAt(i)
         i++
-        setTimeout(typing,30)
+        setTimeout(typing,10)
     }
 }
 
