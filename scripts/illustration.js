@@ -1,3 +1,5 @@
+
+
 class Slider {
     constructor(selector, sliding)
     {
@@ -91,23 +93,7 @@ class Slider {
       }
   
     }
-
-    /*filter(){
-        this.buttons = document.querySelectorAll('.slider__button')
-        this.SliderImage = document.querySelectorAll('.slider__image')
-        for(let i = 0; i<this.buttons.length; i++){
-            this.buttons[i].addEventListener('click', ()=>{
-               let target = this.buttons[i].getAttribute('data-target') 
-               for(let j = 0; j<this.SliderImage.length; i++){
-                   
-               }
-            })
-            
-        }
-    }*/
-
   }
-
   //Litrer slider
 
   class Filter{
@@ -132,9 +118,7 @@ class Slider {
             if(this.slider[j].classList.contains(target))
             {
               this.slider[j].style.display= 'block'
-              this.sliderContent[j].classList.add('slider')
-
-              
+              this.sliderContent[j].classList.add('slider')              
               let mySlide = new Slider(".slider", 1)
               console.log(this.sliderImg)
             }
