@@ -6,7 +6,7 @@ body{
 
 body, html, header{
     height: 95%;
-    width: fit-content
+    /* width: fit-content */
 }
 
 header{
@@ -22,9 +22,7 @@ nav{
     padding: 0;
     margin: 0;
     padding-top: 10px;
-    position: fixed;
     background: #FFF;
-    z-index: 10;
     top: 0;
 }
 
