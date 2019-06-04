@@ -236,11 +236,11 @@ footer{
     border: 2px solid black;
 }
 
-@media screen and (min-width: 100px) and (max-width: 900px) { 
+@media screen and (min-width: 300px) and (max-width: 700px) { 
 
     body, html, header{
         height: 95%;
-        width: initial
+        width: auto;
     }
 
     .header{
@@ -251,7 +251,6 @@ footer{
     .menu__hamburger{
     background: #FFF;
     position: fixed;
-    width: 100%;
     top: 0;
     z-index: 100;
     }
@@ -327,7 +326,6 @@ footer{
                   transform: translate3d(0, -10px, 0) rotate(-45deg); }
         
         .overlay{
-            width: 100%;
             /* border: #000 solid .5px; */
             border-radius: 4px;
             background: #FFF;
@@ -364,14 +362,14 @@ footer{
 
         .menu__logo p {
             margin: 0;
-            font-size: 3em;
+            font-size: 2em;
             margin-top: 10px;
         }
         
         li{
             margin: 0 auto;
-            padding: 40px;
-            font-size: 4em;
+            padding: 37px 45px;
+            font-size: 1em;
             text-align: center;
             text-transform: uppercase;
         }
@@ -382,6 +380,35 @@ footer{
         
         .overlay-content li {
             display: grid;
+        }
+
+        .first__presentation{
+            margin: 30px;
+        }
+
+        .first__text{
+            width: auto;
+        }
+
+        .second__project{
+            width: auto;
+        }
+
+        .second__contains{
+            width: auto;
+        }
+
+        .object{
+            width: auto;
+        }
+
+        .foot__content{
+            justify-content: initial;
+            flex-direction: column-reverse;
+        }
+
+        .foot__social{
+            width: auto;
         }
         
      }
