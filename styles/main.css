@@ -238,6 +238,11 @@ footer{
 
 @media screen and (min-width: 100px) and (max-width: 900px) { 
 
+    body, html, header{
+        height: 95%;
+        width: initial
+    }
+
     .header{
         display: flex;
         justify-content: flex-end;
