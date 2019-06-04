@@ -97,8 +97,8 @@ a{
 .background{
     height: 100%;
     background: url(../images/backgroundResize.png) no-repeat fixed center ;
-/*     background-size: cover;
- */}
+    background-size: cover;
+}
 /* Main */ 
 
 .first__section{
@@ -253,6 +253,7 @@ footer{
     position: fixed;
     top: 0;
     z-index: 100;
+    width: 100%;
     }
     
     header .header__contains{
@@ -400,6 +401,7 @@ footer{
 
         .object{
             width: auto;
+            filter: none;
         }
 
         .foot__content{
