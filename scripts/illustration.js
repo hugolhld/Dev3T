@@ -119,7 +119,7 @@ class Slider {
             {
               this.slider[j].style.display= 'block'
               this.sliderContent[j].classList.add('slider')              
-              let Slider = new Slider(".slider", 1)
+              let mySlider = new Slider(".slider", 1)
             }
             else{
               this.sliderContent[j].classList.remove('slider')
