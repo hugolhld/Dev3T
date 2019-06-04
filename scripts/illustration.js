@@ -32,9 +32,29 @@ class Slider {
       this.slider.appendChild(this.sliderContainer)
   
       // ajout des fleches
-      this.arrowNext = document.querySelector('.arrowNext')
+      this.arrowNav = document.createElement('div')
+      this.arrowNav.classList.add('arrowNav')
+      this.slider.appendChild(this.arrowNav)
   
-      this.arrowPrev = document.querySelector('.arrowPrevious')
+      this.arrowNext = document.createElement('div')
+      this.arrowNext.classList.add('arrowNext')
+      this.arrowNav.appendChild(this.arrowNext)
+      this.arrowUP = document.createElement('div')
+      this.arrowUP.classList.add('up')
+      this.arrowDN = document.createElement('div')
+      this.arrowDN.classList.add('down')
+      this.arrowNext.appendChild(this.arrowUP)
+      this.arrowNext.appendChild(this.arrowDN)
+  
+      this.arrowPrev = document.createElement('div')
+      this.arrowPrev.classList.add('arrowPrevious')
+      this.arrowNav.appendChild(this.arrowPrev)
+      this.arrowUP = document.createElement('div')
+      this.arrowUP.classList.add('up')
+      this.arrowDN = document.createElement('div')
+      this.arrowDN.classList.add('down')
+      this.arrowPrev.appendChild(this.arrowUP)
+      this.arrowPrev.appendChild(this.arrowDN)
   
       this.arrowNext.addEventListener('click',()=>
       {
@@ -87,11 +107,6 @@ class Slider {
     }*/
 
   }
-  
-  
-  let mySlide = new Slider('.slider',1)
-  let newSlide = new Slider('.slidersecond',1)
-
 
   //Litrer slider
 
@@ -100,6 +115,8 @@ class Slider {
     {
       this.buttons = document.querySelectorAll('.slider__button')
       this.slider = document.querySelectorAll('.home__slider')
+      this.sliderContent = document.querySelectorAll('.slider__selection')
+      this.sliderImg = document.querySelectorAll('.slider__container')
   
       this.init()
     }
@@ -114,10 +131,15 @@ class Slider {
           {
             if(this.slider[j].classList.contains(target))
             {
-              this.slider[j].style.display= 'initial'
-              this.slider[j].classList.remove('disable')
+              this.slider[j].style.display= 'block'
+              this.sliderContent[j].classList.add('slider')
+
+              
+              let mySlide = new Slider(".slider", 1)
+              console.log(this.sliderImg)
             }
             else{
+              this.sliderContent[j].classList.remove('slider')
               this.slider[j].style.display= 'none'
             }
           }
