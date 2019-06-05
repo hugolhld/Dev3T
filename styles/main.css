@@ -363,7 +363,7 @@ footer{
 
         .menu__logo p {
             margin: 0;
-            font-size: 2em;
+            font-size: 1.5em;
             margin-top: 10px;
         }
         
@@ -411,6 +411,11 @@ footer{
 
         .foot__social{
             width: auto;
+        }
+
+        .foot__bio{
+            width: auto;
+            text-align: center;
         }
         
      }
