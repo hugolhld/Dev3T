@@ -13,7 +13,7 @@ function typing(){
     if(i < text.length){
         document.querySelector(".first__typed").innerHTML += text.charAt(i)
         i++
-        setTimeout(typing,10)
+        setTimeout(typing,5)
     }
 }
 

@@ -115,7 +115,7 @@ a{
 
 .first__cursor{
     opacity: 1;
-    animation: blink 0.7s  infinite;
+    animation: cursor 0.4s  infinite;
     -webkit-animation: cursor 0.4s infinite
 }
 
