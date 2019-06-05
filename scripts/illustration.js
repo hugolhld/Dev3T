@@ -17,7 +17,6 @@ class Slider {
       this.arrowNav
   
       this.init()
-  
       this.hideArrow()
       //this.filter()
     }
@@ -51,12 +50,10 @@ class Slider {
       this.arrowPrev = document.createElement('div')
       this.arrowPrev.classList.add('arrowPrevious')
       this.arrowNav.appendChild(this.arrowPrev)
-      this.arrowUP = document.createElement('div')
-      this.arrowUP.classList.add('up')
-      this.arrowDN = document.createElement('div')
-      this.arrowDN.classList.add('down')
-      this.arrowPrev.appendChild(this.arrowUP)
-      this.arrowPrev.appendChild(this.arrowDN)
+      this.arrowPrevImg = document.createElement('img')
+      this.arrowPrevImg.setAttribute('src', "images/left-arrow.svg")
+      this.arrowPrev.appendChild(this.arrowPrevImg)
+
   
       this.arrowNext.addEventListener('click',()=>
       {

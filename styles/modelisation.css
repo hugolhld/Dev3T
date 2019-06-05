@@ -125,6 +125,7 @@ a{
 .slider__image img{
     width: 100%;
     height: auto;
+    border: 1px solid black;
 }
 
 .arrowPrevious{
@@ -142,20 +143,20 @@ a{
 
 .up{
     border: #7f8c8d solid 1px;
-    transform: rotate(-45deg) ;
+    transform: rotate(-30deg) ;
 }
 
 .down{
     border: #7f8c8d solid 1px;
-    transform: rotate(45deg) ;
+    transform: rotate(30deg) ;
 }
 
 .arrowNext{
     position: absolute;
-    right: 0;
+    right: 20%;
     top: 0;
-    width: 20%;
-    height: 206px;
+    width: 5%;
+    height: 50px;
     display: none;
     flex-wrap: wrap;
     margin-top: 17%;
