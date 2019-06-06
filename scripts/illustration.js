@@ -17,6 +17,7 @@ class Slider {
       this.arrowNav
   
       this.init()
+  
       this.hideArrow()
       //this.filter()
     }
@@ -53,7 +54,6 @@ class Slider {
       this.arrowPrevImg = document.createElement('img')
       this.arrowPrevImg.setAttribute('src', "images/left-arrow.svg")
       this.arrowPrev.appendChild(this.arrowPrevImg)
-
   
       this.arrowNext.addEventListener('click',()=>
       {
@@ -103,8 +103,6 @@ class Slider {
       this.slider = document.querySelectorAll('.home__slider')
       this.sliderContent = document.querySelectorAll('.slider__selection')
       this.sliderImg = document.querySelectorAll('.slider__container')
-      
-      
   
       this.init()
     }
@@ -121,26 +119,16 @@ class Slider {
             {
               this.slider[j].style.display= 'block'
               this.sliderContent[j].classList.add('slider')              
-<<<<<<< HEAD
-              new Slider(".slider", 1)
-=======
               let mySlider = new Slider(".slider", 1)
               this.divTemp = document.querySelector('.sliderContainer')
               console.log(this.divTemp)
               this.divTemp.classList.add('remove')
->>>>>>> 12b4e9e243469c3def129e6873b0e329cea55ed9
             }
             else{
               this.sliderContent[j].classList.remove('slider')
               this.slider[j].style.display= 'none'
-<<<<<<< HEAD
-              delete Slider(".slider",1)
-=======
               this.divRemove = document.querySelector('.remove')
               this.sliderContent[j].removeChild(this.divRemove)
-              
-              
->>>>>>> 12b4e9e243469c3def129e6873b0e329cea55ed9
             }
           }
         })
