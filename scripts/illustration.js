@@ -63,7 +63,10 @@ class Slider {
         this.currentPosition = this.currentPosition + this.sliding
         let toSlide = this.sliderCardWidth*this.currentPosition
         this.sliderContainer.style.transform= 'translateX(-'+toSlide+'px)'
-        this.hideArrow()
+        /* this.hideArrow() */
+        if(this.currentPosition+this.sliding>=this.numberItems){
+          this.currentPosition = 0
+        }
       })
   
       this.arrowPrev.addEventListener('click',()=>
@@ -71,7 +74,7 @@ class Slider {
         this.currentPosition = this.currentPosition - this.sliding
         let toSlide = this.sliderCardWidth*this.currentPosition
         this.sliderContainer.style.transform= 'translateX(-'+toSlide+'px)'
-        this.hideArrow()
+        /* this.hideArrow() */
       })
     }
   
@@ -119,11 +122,12 @@ class Slider {
             {
               this.slider[j].style.display= 'block'
               this.sliderContent[j].classList.add('slider')              
-              let mySlider = new Slider(".slider", 1)
+              new Slider(".slider", 1)
             }
             else{
               this.sliderContent[j].classList.remove('slider')
               this.slider[j].style.display= 'none'
+              delete Slider(".slider",1)
             }
           }
         })
