@@ -100,6 +100,8 @@ class Slider {
       this.slider = document.querySelectorAll('.home__slider')
       this.sliderContent = document.querySelectorAll('.slider__selection')
       this.sliderImg = document.querySelectorAll('.slider__container')
+      
+      
   
       this.init()
     }
@@ -117,10 +119,17 @@ class Slider {
               this.slider[j].style.display= 'block'
               this.sliderContent[j].classList.add('slider')              
               let mySlider = new Slider(".slider", 1)
+              this.divTemp = document.querySelector('.sliderContainer')
+              console.log(this.divTemp)
+              this.divTemp.classList.add('remove')
             }
             else{
               this.sliderContent[j].classList.remove('slider')
               this.slider[j].style.display= 'none'
+              this.divRemove = document.querySelector('.remove')
+              this.sliderContent[j].removeChild(this.divRemove)
+              
+              
             }
           }
         })
