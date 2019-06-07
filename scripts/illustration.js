@@ -103,6 +103,7 @@ class Slider {
       this.slider = document.querySelectorAll('.home__slider')
       this.sliderContent = document.querySelectorAll('.slider__selection')
       this.sliderImg = document.querySelectorAll('.slider__container')
+      this.sliderTitle = document.querySelectorAll('.second__title h3')
   
       this.init()
     }
@@ -111,8 +112,10 @@ class Slider {
       for(let i=0; i<this.buttons.length; i++)
       {
         this.buttons[i].addEventListener('click', ()=>{
-          let target = this.buttons[i].getAttribute('data-target');
-  
+          let target = this.buttons[i].getAttribute('data-target')
+          let targetTitle = this.buttons[i].getAttribute('data-title')
+          this.sliderTitle[i].innerHTML = targetTitle
+          
           for(let j=0; j< this.slider.length; j++)
           {
             if(this.slider[j].classList.contains(target))

@@ -96,6 +96,15 @@ a{
     margin: 30px;
 }
 
+.second__title{
+    text-align: center;
+    margin: 0;
+}
+
+.second__title h3{
+    margin: 0;
+}
+
 .slider__content{
     display: flex;
     height: 100%;
@@ -125,7 +134,7 @@ a{
 .slider__image img{
     width: 100%;
     height: auto;
-    border: 1px solid black;
+    border: 2px solid #707070;
 }
 
 .arrowPrevious{
