@@ -130,13 +130,13 @@ a{
 
 .arrowPrevious{
     position: absolute;
-    left: 0;
+    left: 10%;
     top: 0;
-    width: 20%;
-    height: 206px;
+    width: 5%;
+    height: 6%;
     display: none;
     flex-wrap: wrap;
-    margin-top: 17%;
+    margin-top: 23%;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -153,13 +153,13 @@ a{
 
 .arrowNext{
     position: absolute;
-    right: 20%;
+    right: 10%;
     top: 0;
     width: 5%;
-    height: 50px;
+    height: 6%;
     display: none;
     flex-wrap: wrap;
-    margin-top: 17%;
+    margin-top: 22%;
     flex-direction: column;
     justify-content: space-between;
     transform: rotate(180deg)

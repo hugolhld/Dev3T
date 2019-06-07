@@ -8,7 +8,7 @@ class Slider {
       this.currentPosition=0
       this.sliderContainer
       // pour savoir la largeur d'un item
-      this.sliderCardWidth=this.slider.querySelector('.slider__image').offsetWidth;
+      this.sliderCardWidth=this.slider.querySelector('.slider__image').offsetWidth
       // pour savoir combien il y a d'items
       this.numberItems = this.slider.querySelectorAll('.slider__image').length
   
@@ -51,19 +51,19 @@ class Slider {
       this.arrowPrev = document.createElement('div')
       this.arrowPrev.classList.add('arrowPrevious')
       this.arrowNav.appendChild(this.arrowPrev)
-      this.arrowPrevImg = document.createElement('img')
-      this.arrowPrevImg.setAttribute('src', "images/left-arrow.svg")
-      this.arrowPrev.appendChild(this.arrowPrevImg)
+      this.arrowUP = document.createElement('div')
+      this.arrowUP.classList.add('up')
+      this.arrowDN = document.createElement('div')
+      this.arrowDN.classList.add('down')
+      this.arrowPrev.appendChild(this.arrowUP)
+      this.arrowPrev.appendChild(this.arrowDN)
   
       this.arrowNext.addEventListener('click',()=>
       {
         this.currentPosition = this.currentPosition + this.sliding
         let toSlide = this.sliderCardWidth*this.currentPosition
         this.sliderContainer.style.transform= 'translateX(-'+toSlide+'px)'
-        /* this.hideArrow() */
-        if(this.currentPosition+this.sliding>=this.numberItems){
-          this.currentPosition = 0
-        }
+        this.hideArrow()
       })
   
       this.arrowPrev.addEventListener('click',()=>
@@ -71,7 +71,7 @@ class Slider {
         this.currentPosition = this.currentPosition - this.sliding
         let toSlide = this.sliderCardWidth*this.currentPosition
         this.sliderContainer.style.transform= 'translateX(-'+toSlide+'px)'
-        /* this.hideArrow() */
+        this.hideArrow()
       })
     }
   
@@ -118,17 +118,15 @@ class Slider {
             if(this.slider[j].classList.contains(target))
             {
               this.slider[j].style.display= 'block'
-              this.sliderContent[j].classList.add('slider')              
-              let mySlider = new Slider(".slider", 1)
-              this.divTemp = document.querySelector('.sliderContainer')
-              console.log(this.divTemp)
-              this.divTemp.classList.add('remove')
+              this.sliderContent[j].classList.add('slider')
+              if(this.sliderContent[j].childElementCount > 2){
+                let mySlider = new Slider(".slider", 1)
+              }              
             }
             else{
+              
               this.sliderContent[j].classList.remove('slider')
               this.slider[j].style.display= 'none'
-              this.divRemove = document.querySelector('.remove')
-              this.sliderContent[j].removeChild(this.divRemove)
             }
           }
         })
