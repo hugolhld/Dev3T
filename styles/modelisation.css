@@ -201,6 +201,10 @@ a{
     margin: 45px;
 }
 
+.slider__button img{
+    width: 100%;
+}
+
 /*FOOTER*/
 
 footer{
