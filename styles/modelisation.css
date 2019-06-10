@@ -8,6 +8,10 @@ body, html, header{
     height: 50%;
 }
 
+html{
+    scroll-behavior: smooth
+}
+
 header{
     width: 100%;
     margin: 0 auto;

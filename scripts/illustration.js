@@ -104,6 +104,7 @@ class Slider {
       this.sliderContent = document.querySelectorAll('.slider__selection')
       this.sliderImg = document.querySelectorAll('.slider__container')
       this.sliderTitle = document.querySelectorAll('.second__title h3')
+      this.sliderImgDiv = document.querySelectorAll('.slider__image')
   
       this.init()
     }
@@ -115,6 +116,7 @@ class Slider {
           let target = this.buttons[i].getAttribute('data-target')
           let targetTitle = this.buttons[i].getAttribute('data-title')
           this.sliderTitle[i].innerHTML = targetTitle
+          document.documentElement.scrollTop = 0
           
           for(let j=0; j< this.slider.length; j++)
           {
@@ -122,12 +124,11 @@ class Slider {
             {
               this.slider[j].style.display= 'block'
               this.sliderContent[j].classList.add('slider')
-              if(this.sliderContent[j].childElementCount > 2){
+              if(this.sliderContent[j].firstElementChild.classList.contains('slider__image') ){
                 let mySlider = new Slider(".slider", 1)
               }              
             }
             else{
-              
               this.sliderContent[j].classList.remove('slider')
               this.slider[j].style.display= 'none'
             }
