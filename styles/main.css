@@ -154,19 +154,21 @@ a{
 .object{
     width: 23.23%;
     margin: 45px;
-    filter: blur(2px);
+    filter: blur(2px) grayscale(100%);
 }
 
 .object:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: .4s ease-in;
-    filter: blur(0);
+    filter: blur(0) grayscale(0);
 }
 
 .object img{
     width: 100%;
     height: auto;
     margin: 0 auto;
+    border: 1px solid #707070;
+
 }
 
 /*FOOTER*/

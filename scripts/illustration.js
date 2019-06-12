@@ -24,6 +24,7 @@ let overlay = document.querySelector('.overlay')
  let hamburgerBtn = document.querySelector('.hamburger')
  let navContent = document.querySelector('ul')
  let overContent = document.querySelector('.overlay-content') 
+ let hamburgerDivP = document.querySelector('.menu__hamburger p')
  overContent.innerHTML = navContent.innerHTML
 
  hamburgerBtn.addEventListener(
@@ -31,9 +32,12 @@ let overlay = document.querySelector('.overlay')
   function(){
       if(overlay.classList.contains("overlay-on")){
           overlay.classList.remove('overlay-on')
+          hamburgerDivP.style.display = 'flex'
+
       }
       else{
           overlay.classList.add('overlay-on')
+          hamburgerDivP.style.display = 'none'
       }
   }
 )
