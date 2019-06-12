@@ -1,4 +1,20 @@
+let overlay = document.querySelector('.overlay')
+ let hamburgerBtn = document.querySelector('.hamburger')
+ let navContent = document.querySelector('ul')
+ let overContent = document.querySelector('.overlay-content') 
+ overContent.innerHTML = navContent.innerHTML
 
+ hamburgerBtn.addEventListener(
+  'click',
+  function(){
+      if(overlay.classList.contains("overlay-on")){
+          overlay.classList.remove('overlay-on')
+      }
+      else{
+          overlay.classList.add('overlay-on')
+      }
+  }
+)
 
 class Slider {
     constructor(selector, sliding)
