@@ -188,3 +188,15 @@ class Slider {
   
   let myFilter = new Filter()
   
+  scroll()
+const header = document.querySelector('header')
+  function scroll(){
+    window.addEventListener('scroll', ()=>{
+      console.log(window.pageYOffset)
+      if(window.scrollTop){
+        header.style.position = 'fixed'
+      }
+    })
+  }
+
+  
