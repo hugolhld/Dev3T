@@ -193,8 +193,11 @@ const header = document.querySelector('header')
   function scroll(){
     window.addEventListener('scroll', ()=>{
       console.log(window.pageYOffset)
-      if(window.scrollTop){
+      if(window.pageYOffset >= 10){
         header.style.position = 'fixed'
+      }
+      else{
+        header.style.position = 'initial'
       }
     })
   }

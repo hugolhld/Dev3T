@@ -21,12 +21,22 @@
             }
  
  let i = 0,text
- text = 'Je m’appelle Cannelle Robert, j’ai 20 ans et suis actuellement étudiante en première année à l’école ESMA Nantes. Je suis dans la filière “cinéma d’animations 3D effets spéciaux” de cette école. Actuellement en première année, je réalise différentes créations en 2D et en 3D sous forme d’image. Illud autem non dubitatur quod cum esset aliquando virtutum omnium domicilium Roma, ingenuos advenas plerique nobilium, ut Homerici bacarum suavitate Lotophagi, humanitatis multiformibus officiis retentabant. '
+ text = 'Je m’appelle Cannelle Robert, j’ai 20 ans et je suis actuellement étudiante à l’école ESMA (École Supérieure des Métiers Artistiques) à Nantes. Je suis dans la filière “Cinéma d’animations 3D effets spéciaux” de cette école. Dans ce portfolio, vous trouverez tous mes travaux réalisées lors de ma première année d\'études.'
+ let ext = 'Je m’appelle Cannelle Robert, j’ai 20 ans et je suis actuellement étudiante à l’école ESMA (École Supérieure des Métiers Artistiques) à Nantes. Je suis dans la filière “Cinéma d’animations 3D effets spéciaux” de cette école. Dans ce portfolio, vous trouverez tous mes travaux réalisées lors de ma première année d\'études.'
  let overlay = document.querySelector('.overlay')
  let hamburgerBtn = document.querySelector('.hamburger')
  let navContent = document.querySelector('ul')
  let overContent = document.querySelector('.overlay-content') 
+ let footLogo = document.querySelector('.foot__logo a img')
  overContent.innerHTML = navContent.innerHTML
+
+footLogo.addEventListener('mouseover', ()=>{
+    footLogo.src = ('images/instagram (2).svg')
+})
+
+footLogo.addEventListener('mouseout', ()=>{
+    footLogo.src = ('images/instagram (1).svg')
+})
 
 typing()
 
@@ -39,6 +49,25 @@ function typing(){
     }
 }
 
+/* class Writing{
+    constructor(selector){
+        this.text = 'text'
+        this.selector = document.querySelector(selector)
+        this.init()
+    } 
+    init(){
+        let i = 0
+        if(i < text.length){
+            this.selector.innerHTML += this.text.charAt(i)
+            i++
+            setTimeout(this.init, 5)
+
+        }
+    }
+}
+
+let writingBio = new Writing(".first__typed") */
+
 hamburgerBtn.addEventListener(
     'click',
     function(){
@@ -50,3 +79,5 @@ hamburgerBtn.addEventListener(
         }
     }
 )
+
+

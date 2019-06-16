@@ -12,6 +12,10 @@ html{
 header{
     width: 100%;
     margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    top: 0;
+    z-index: 10;
+    transition: .5s
 }
 
 nav{
@@ -115,7 +119,8 @@ a{
 }
 
 .first__title h1{
-    font-weight: 800;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
 }
 
 .second__title{
@@ -125,9 +130,10 @@ a{
 
 .second__title h3{
     margin: 0;
-    font-weight: 600;
-    font-size: 2em;
+    font-weight: 400;
+    font-size: 1.7em;
     text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
 }
 
 .slider__content{
