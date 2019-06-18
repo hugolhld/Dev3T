@@ -81,24 +81,12 @@ class Slider {
       this.slider.appendChild(this.arrowNav)
   
       this.arrowNext = document.createElement('div')
-      this.arrowNext.classList.add('arrowNext')
+      this.arrowNext.classList.add('arrowRight')
       this.arrowNav.appendChild(this.arrowNext)
-      this.arrowUP = document.createElement('div')
-      this.arrowUP.classList.add('up')
-      this.arrowDN = document.createElement('div')
-      this.arrowDN.classList.add('down')
-      this.arrowNext.appendChild(this.arrowUP)
-      this.arrowNext.appendChild(this.arrowDN)
   
       this.arrowPrev = document.createElement('div')
-      this.arrowPrev.classList.add('arrowPrevious')
+      this.arrowPrev.classList.add('arrowLeft')
       this.arrowNav.appendChild(this.arrowPrev)
-      this.arrowUP = document.createElement('div')
-      this.arrowUP.classList.add('up')
-      this.arrowDN = document.createElement('div')
-      this.arrowDN.classList.add('down')
-      this.arrowPrev.appendChild(this.arrowUP)
-      this.arrowPrev.appendChild(this.arrowDN)
   
       this.arrowNext.addEventListener('click',()=>
       {

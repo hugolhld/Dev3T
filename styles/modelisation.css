@@ -172,43 +172,28 @@ a{
     border: 2px solid #707070;
 }
 
-.arrowPrevious{
+.arrowLeft{
+    margin-top: 23%;
+    display: none;
     position: absolute;
     left: 10%;
     top: 0;
-    width: 5%;
-    height: 37px;
-    display: none;
-    flex-wrap: wrap;
+    border: solid #707070;
+    border-width: 0px 1px 1px 0px;
+    padding: 30px;
+    transform: rotate(135deg);
+}
+
+.arrowRight{
     margin-top: 23%;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.up{
-    border: #7f8c8d solid 1px;
-    transform: rotate(-30deg) ;
-    border: 1px solid #707070;
-}
-
-.down{
-    border: #7f8c8d solid 1px;
-    transform: rotate(30deg) ;
-    border: 1px solid #707070;
-}
-
-.arrowNext{
+    display: none;
     position: absolute;
     right: 10%;
     top: 0;
-    width: 5%;
-    height: 37px;
-    display: none;
-    flex-wrap: wrap;
-    margin-top: 22%;
-    flex-direction: column;
-    justify-content: space-between;
-    transform: rotate(180deg)
+    border: solid #707070;
+    border-width: 0px 1px 1px 0px;
+    padding: 30px;
+    transform: rotate(-45deg);
 }
 
 .is-visible{
@@ -300,7 +285,7 @@ footer{
     height: 20px;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) { 
+@media screen and (min-width: 375px) and (max-width: 768px) { 
     
     /*SLIDER*/
     .slider{
@@ -313,21 +298,20 @@ footer{
 
     .arrowNav{
     flex-direction: row-reverse;
-    height: 26px;
     display: flex;
     justify-content: space-around;
     }
 
-    .arrowNext{
-    height: 11px;
+    .arrowRight{
     position: initial;
     margin-top: 0;
+    padding: 15px;
     }
 
-    .arrowPrevious{
-    height: 11px;
+    .arrowLeft{
     position: initial;
     margin-top: 0;
+    padding: 15px;
     }
     /*NAV & FOOTER*/
     body, html, header{
@@ -505,3 +489,20 @@ footer{
         }
         
     }
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .slider{
+        width: 830px;
+    }
+    .slider__image{
+        width: 810px;
+    }
+    .arrowRight{
+        margin-top: 30%;
+        right: 20px;
+    }
+    .arrowLeft{
+        margin-top: 30%;
+        left: 20px;
+    }
+}
