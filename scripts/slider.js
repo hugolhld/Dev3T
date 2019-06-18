@@ -32,12 +32,10 @@ let overlay = document.querySelector('.overlay')
   function(){
       if(overlay.classList.contains("overlay-on")){
           overlay.classList.remove('overlay-on')
-          hamburgerDivP.style.display = 'flex'
 
       }
       else{
           overlay.classList.add('overlay-on')
-          hamburgerDivP.style.display = 'none'
       }
   }
 )

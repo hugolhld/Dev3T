@@ -223,11 +223,35 @@ a{
     width: 23.23%;
     margin: 4.9%;
     cursor: pointer;
+}
+
+.slider__button:nth-child(3n+3){
     animation: animationBtn 2s;
+
+}
+
+.slider__button:nth-child(3n+1){
+    animation: animationBtnX 2s;
+
+}
+
+.slider__button:nth-child(3n+2){
+    animation: animationBtnY 2s;
+
+}
+
+@keyframes animationBtnY{
+    from{transform: translateY(300px) }
+    to{transform: translateX(0)}
 }
 
 @keyframes animationBtn{
     from{transform: translateX(300px) }
+    to{transform: translateX(0)}
+}
+
+@keyframes animationBtnX{
+    from{transform: translateX(-300px) }
     to{transform: translateX(0)}
 }
 
@@ -504,5 +528,24 @@ footer{
     .arrowLeft{
         margin-top: 30%;
         left: 20px;
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 2560px){
+    .slider{
+        width: 1190px;
+    }
+    .slider__image{
+        width: 1170px;
+    }
+    .arrowRight{
+        margin-top: 20%;
+        right: 100px;
+        padding: 70px
+    }
+    .arrowLeft{
+        margin-top: 20%;
+        left: 100px;
+        padding: 70px;
     }
 }
