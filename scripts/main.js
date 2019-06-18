@@ -26,7 +26,7 @@
  let hamburgerBtn = document.querySelector('.hamburger')
  let navContent = document.querySelector('ul')
  let overContent = document.querySelector('.overlay-content') 
- let footLogo = document.querySelector('.foot__logo a img')
+ let footLogo = document.querySelector('footer a img')
  let headerBackground = document.querySelector('.background')
  overContent.innerHTML = navContent.innerHTML
 
