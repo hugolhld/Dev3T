@@ -217,7 +217,7 @@ footer{
     height: 40px;
 }
 
-@media screen and (min-width: 300px) and (max-width: 700px) { 
+@media screen and (min-width: 320px) and (max-width: 768px) { 
 
     body, html, header{
         height: 95%;

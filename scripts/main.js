@@ -27,6 +27,7 @@
  let navContent = document.querySelector('ul')
  let overContent = document.querySelector('.overlay-content') 
  let footLogo = document.querySelector('.foot__logo a img')
+ let headerBackground = document.querySelector('.background')
  overContent.innerHTML = navContent.innerHTML
 
 footLogo.addEventListener('mouseover', ()=>{
@@ -38,7 +39,7 @@ footLogo.addEventListener('mouseout', ()=>{
 })
 
 window.addEventListener('scroll', ()=>{
-    if(window.pageYOffset >= 15){
+    if(window.pageYOffset >= headerBackground.clientHeight/2){
         typing()
     }
 })
@@ -49,7 +50,7 @@ function typing(){
     if(i < text.length){
         document.querySelector(".first__typed").innerHTML += text.charAt(i)
         i++
-        setTimeout(typing,25)
+        setTimeout(typing,50)
     }
 }
 
