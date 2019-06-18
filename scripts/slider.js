@@ -193,11 +193,13 @@ const header = document.querySelector('header')
   function scroll(){
     window.addEventListener('scroll', ()=>{
       console.log(window.pageYOffset)
-      if(window.pageYOffset >= 10){
+      if(window.pageYOffset > header.clientHeight){
         header.style.position = 'fixed'
+        header.style.animation ='animationHeader .3s'
       }
       else{
         header.style.position = 'initial'
+        header.style.animation =' none'
       }
     })
   }

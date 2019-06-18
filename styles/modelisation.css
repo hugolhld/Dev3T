@@ -6,7 +6,6 @@ body{
 
 html{
     scroll-behavior: smooth;
-    
 }
 
 header{
@@ -15,7 +14,6 @@ header{
     font-family: 'Roboto', sans-serif;
     top: 0;
     z-index: 10;
-    transition: .5s
 }
 
 nav{
@@ -96,6 +94,11 @@ a{
 
 .active{
     color: #7f8c8d;
+}
+
+@keyframes animationHeader{
+    from{transform: translateY(-300px) }
+    to{transform: translateY(0)}
 }
 /* SLIDER */
 .home__slider{

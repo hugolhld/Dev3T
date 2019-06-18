@@ -22,7 +22,6 @@
  
  let i = 0,text
  text = 'Je m’appelle Cannelle Robert, j’ai 20 ans et je suis actuellement étudiante à l’école ESMA (École Supérieure des Métiers Artistiques) à Nantes. Je suis dans la filière “Cinéma d’animations 3D effets spéciaux” de cette école. Dans ce portfolio, vous trouverez tous mes travaux réalisées lors de ma première année d\'études.'
- let ext = 'Je m’appelle Cannelle Robert, j’ai 20 ans et je suis actuellement étudiante à l’école ESMA (École Supérieure des Métiers Artistiques) à Nantes. Je suis dans la filière “Cinéma d’animations 3D effets spéciaux” de cette école. Dans ce portfolio, vous trouverez tous mes travaux réalisées lors de ma première année d\'études.'
  let overlay = document.querySelector('.overlay')
  let hamburgerBtn = document.querySelector('.hamburger')
  let navContent = document.querySelector('ul')
@@ -38,14 +37,19 @@ footLogo.addEventListener('mouseout', ()=>{
     footLogo.src = ('images/instagram (1).svg')
 })
 
-typing()
+window.addEventListener('scroll', ()=>{
+    if(window.pageYOffset >= 15){
+        typing()
+    }
+})
+
 
 function typing(){
     
     if(i < text.length){
         document.querySelector(".first__typed").innerHTML += text.charAt(i)
         i++
-        setTimeout(typing,0)
+        setTimeout(typing,25)
     }
 }
 
