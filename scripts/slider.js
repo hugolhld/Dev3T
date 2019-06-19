@@ -20,6 +20,8 @@
               });
             }
 
+//Event for hamburger on
+
 let overlay = document.querySelector('.overlay')
  let hamburgerBtn = document.querySelector('.hamburger')
  let navContent = document.querySelector('ul')
@@ -47,9 +49,9 @@ class Slider {
     this.sliding = sliding
     this.currentPosition=0
     this.sliderContainer
-    // pour savoir la largeur d'un item
+    // width of items
     this.sliderCardWidth=this.slider.querySelector('.slider__image').offsetWidth
-    // pour savoir combien il y a d'items
+    // how much items
     this.numberItems = this.slider.querySelectorAll('.slider__image').length
     this.items = this.slider.querySelectorAll('.slider__image')
 
@@ -59,13 +61,12 @@ class Slider {
 
     this.init()
     this.hideArrow()
-    //this.filter()
   }
 
   init()
   {
 
-    // ajout de la div intermédiaire
+    // div temporary
     this.sliderContainer= document.createElement('div')
     this.sliderContainer.classList.add('sliderContainer')
     this.sliderContainer.style.width= ((this.numberItems/this.sliding) *100) +'%'
@@ -73,10 +74,10 @@ class Slider {
     this.slider.innerHTML= '';
     this.slider.appendChild(this.sliderContainer)
 
-    //width des images
+    //width image
     this.sliderCardWidth = ((100/ this.sliding)/(this.numberItems/this.sliding)) + '%'
 
-    // ajout des fleches
+    // put arrow in slider
     this.arrowNav = document.createElement('div')
     this.arrowNav.classList.add('arrowNav')
     this.slider.appendChild(this.arrowNav)
@@ -130,7 +131,7 @@ hideArrow()
 
   }
 }
-  //Litrer slider
+  //Class for chnage slider on click
 
   class Filter{
     constructor()
@@ -181,12 +182,13 @@ hideArrow()
   }
   
   let myFilter = new Filter()
-  
-  scroll()
+
+// Function for heeader go fixed  
+
+scroll()
 const header = document.querySelector('header')
   function scroll(){
     window.addEventListener('scroll', ()=>{
-      console.log(window.pageYOffset)
       if(window.pageYOffset > header.clientHeight){
         header.style.position = 'fixed'
         header.style.animation ='animationHeader .3s'
