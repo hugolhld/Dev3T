@@ -124,10 +124,12 @@ a:hover{
 .object{
     width: 23.23%;
     margin: 45px;
+    filter: grayscale(100%);
 }
 
 .object:hover{
     transform: scale(1.2);
+    filter: grayscale(0);
     transition: .4s ease-in;
 }
 
