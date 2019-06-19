@@ -175,11 +175,6 @@ footer a img{
         width: auto;
     }
 
-    .header{
-        display: flex;
-        justify-content: flex-end;
-    }
-
     .menu__hamburger{
     background: #FFF;
     position: fixed;
@@ -191,6 +186,7 @@ footer a img{
     header .header__contains{
         display: none;
     }
+    
     
         .hamburger {
             padding: 15px 15px;
@@ -280,7 +276,7 @@ footer a img{
             background-attachment: initial;
         }
 
-        .menu__logo a{
+        /* .menu__logo a{
             display: flex !important;
             flex-direction: column;
             margin: 0 auto;
@@ -297,7 +293,7 @@ footer a img{
             margin: 0;
             font-size: 1.5em;
             margin-top: 10px;
-        }
+        } */
         
         li{
             margin: 0 auto;

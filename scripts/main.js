@@ -29,6 +29,7 @@
  let footLogo = document.querySelector('footer a img')
  let headerBackground = document.querySelector('.background')
  overContent.innerHTML = navContent.innerHTML
+ console.log(overContent)
 
 footLogo.addEventListener('mouseover', ()=>{
     footLogo.src = ('images/instagram (2).svg')
