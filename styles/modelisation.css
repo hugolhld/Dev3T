@@ -73,6 +73,10 @@ a:hover{
     display: none;
 }
 
+.menu__hamburger img{
+    display: none;
+}
+
 @keyframes animationHeader{
     from{transform: translateY(-300px) }
     to{transform: translateY(0)}
@@ -302,6 +306,16 @@ footer a img{
     top: 0;
     z-index: 100;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .menu__hamburger img{
+        margin-right: 10%;
+        width: 30px;
+        height: 30px;
+        display: block;
     }
 
     nav{

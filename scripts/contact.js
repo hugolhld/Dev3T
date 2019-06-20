@@ -20,21 +20,27 @@
                 });
             }
 
-let overlay = document.querySelector('.overlay')
-let hamburgerBtn = document.querySelector('.hamburger')
-let navContent = document.querySelector('ul')
-let overContent = document.querySelector('.overlay-content') 
-let hamburgerDivP = document.querySelector('.menu__hamburger p')
-
-hamburgerBtn.addEventListener(
-    'click',
-    function(){
-        if(overlay.classList.contains("overlay-on")){
-            overlay.classList.remove('overlay-on')
-  
-        }
-        else{
-            overlay.classList.add('overlay-on')
-        }
-    }
-  )
+            let overlay = document.querySelector('.overlay')
+            let hamburgerBtn = document.querySelector('.hamburger')
+            let navContent = document.querySelector('ul')
+            let overContent = document.querySelector('.overlay-content') 
+            let hamburgerDivP = document.querySelector('.menu__hamburger p')
+            let hamburgerDiv = document.querySelector('.menu__hamburger')
+            let hamburgerDivImg = document.querySelector('.menu__hamburger img')
+            overContent.innerHTML = navContent.innerHTML
+           
+            hamburgerBtn.addEventListener(
+             'click',
+             function(){
+                 if(overlay.classList.contains("overlay-on")){
+                     overlay.classList.remove('overlay-on')
+                     hamburgerDiv.style.display = 'flex'
+                     hamburgerDivImg.style.display = 'block' 
+                 }
+                 else{
+                     overlay.classList.add('overlay-on')
+                     hamburgerDiv.style.display = 'block'
+                     hamburgerDivImg.style.display = 'none' 
+                 }
+             }
+           )

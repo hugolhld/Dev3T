@@ -64,6 +64,10 @@ a:hover{
     display: none;
 }
 
+.menu__hamburger img{
+    display: none;
+}
+
 /* MAIN CONTACT*/
 
 #contact{
@@ -168,6 +172,16 @@ footer a:hover{
     top: 0;
     z-index: 100;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .menu__hamburger img{
+        margin-right: 10%;
+        width: 30px;
+        height: 30px;
+        display: block;
     }
 
     nav{
