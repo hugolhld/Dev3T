@@ -427,6 +427,26 @@ footer a img{
             width: auto;
             filter: none;
         }   
+
+        footer{
+            flex-direction: column;
+            text-align: center;
+        }
+
+
+        #footer__insta{
+            display: none;
+        }
+
+        #footer__insta__responsive{
+            display: flex;
+            width: 100%;
+            justify-content: center
+        }
+
+        #footer__insta__responsive img{
+            padding: 0;
+        }
     }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
