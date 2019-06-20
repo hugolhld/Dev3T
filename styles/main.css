@@ -103,7 +103,7 @@ a:hover{
 }
 
 .second__contains{
-    width: 940px;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -124,7 +124,7 @@ a:hover{
 
 .object{
     width: 23.23%;
-    margin: 45px;
+    margin: 4.9%;
     filter: grayscale(100%);
 }
 
@@ -337,11 +337,9 @@ footer a img{
             justify-content: center;
         }
 
-
         .object{
-            margin: 10px;
             filter: none;    
-            width: 23.23%;
+            width: auto;
         }
 
 
@@ -370,3 +368,9 @@ footer a img{
         }
 
      }
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .object{
+        width: 40%;
+    }
+}
