@@ -29,7 +29,7 @@
  let overContent = document.querySelector('.overlay-content') 
  let hamburgerDivP = document.querySelector('.menu__hamburger p')
  let hamburgerDiv = document.querySelector('.menu__hamburger')
- let hamburgerDivImg = document.querySelector('.menu__hamburger img')
+ let hamburgerDivImg = document.querySelector('.hamburger__image')
  let footLogo = document.querySelector('footer a img')
  let headerBackground = document.querySelector('.background')
  overContent.innerHTML = navContent.innerHTML
@@ -55,7 +55,7 @@ function typing(){
     if(i < text.length){
         document.querySelector(".first__typed").innerHTML += text.charAt(i)
         i++
-        setTimeout(typing,50)
+        setTimeout(typing,100)
     }
 }
 
