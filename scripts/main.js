@@ -28,6 +28,8 @@
  let navContent = document.querySelector('ul')
  let overContent = document.querySelector('.overlay-content') 
  let hamburgerDivP = document.querySelector('.menu__hamburger p')
+ let hamburgerDiv = document.querySelector('.menu__hamburger')
+ let hamburgerDivImg = document.querySelector('.menu__hamburger img')
  let footLogo = document.querySelector('footer a img')
  let headerBackground = document.querySelector('.background')
  overContent.innerHTML = navContent.innerHTML
@@ -57,36 +59,20 @@ function typing(){
     }
 }
 
-/* class Writing{
-    constructor(selector){
-        this.text = 'text'
-        this.selector = document.querySelector(selector)
-        this.init()
-    } 
-    init(){
-        let i = 0
-        if(i < text.length){
-            this.selector.innerHTML += this.text.charAt(i)
-            i++
-            setTimeout(this.init, 5)
-
-        }
-    }
-}
-
-let writingBio = new Writing(".first__typed") */
-
-hamburgerBtn.addEventListener(
-    'click',
-    function(){
-        if(overlay.classList.contains("overlay-on")){
-            overlay.classList.remove('overlay-on')
-  
-        }
-        else{
-            overlay.classList.add('overlay-on')
-        }
-    }
-  )
+ hamburgerBtn.addEventListener(
+  'click',
+  function(){
+      if(overlay.classList.contains("overlay-on")){
+          overlay.classList.remove('overlay-on')
+          hamburgerDiv.style.display = 'flex'
+          hamburgerDivImg.style.display = 'block' 
+      }
+      else{
+          overlay.classList.add('overlay-on')
+          hamburgerDiv.style.display = 'block'
+          hamburgerDivImg.style.display = 'none' 
+      }
+  }
+)
 
 
