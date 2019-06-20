@@ -26,7 +26,7 @@
             let overContent = document.querySelector('.overlay-content') 
             let hamburgerDivP = document.querySelector('.menu__hamburger p')
             let hamburgerDiv = document.querySelector('.menu__hamburger')
-            let hamburgerDivImg = document.querySelector('.menu__hamburger img')
+            let hamburgerDivImg = document.querySelector('.hamburger__image')
             overContent.innerHTML = navContent.innerHTML
            
             hamburgerBtn.addEventListener(

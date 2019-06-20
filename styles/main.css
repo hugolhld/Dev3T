@@ -66,7 +66,7 @@ a:hover{
     display: none;
 }
 
-.menu__hamburger img{
+.hamburger__image {
     display: none;
 }
 
@@ -201,11 +201,14 @@ footer a img{
     justify-content: space-between;
     }
 
-    .menu__hamburger img{
-        margin-right: 10%;
+    .hamburger__image img{
         width: 30px;
         height: 30px;
+    }
+
+    .hamburger__image{
         display: block;
+        margin-right: 10%;
     }
 
     nav{
