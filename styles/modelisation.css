@@ -4,84 +4,57 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-html{
-    scroll-behavior: smooth;
+body, html{
+    height: 100%;
 }
 
 header{
-    width: 100%;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
-    top: 0;
-    z-index: 10;
 }
 
-nav{
-    width: 100%;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    padding-top: 10px;
-    background: #FFF;
-    top: 0;
+.container{
+    width: 1024px;
+    margin: 0 auto;
 }
 
 a{
-    text-decoration: none;
     color: black;
+    text-decoration: none;
 }
 
-.menu__contains{
-    margin: 0 auto;
+/*HEADER*/
+
+#menu {
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    background-color: white;
 }
 
-.menu__logo{
-    font-size: .9em;
+#menu a{
+    font-size: 1em;
+    color:black;
 }
 
 .menu__logo a{
     display: flex;
+    font-weight: 500;
     text-transform: uppercase;
-    font-weight: 600;
-    line-height: 1.5em;
+    align-items: center;
 }
 
-.menu__logo p {
-    margin: -5px 5px;
-}
-
-.menu__logo img{
-    margin-top: -10px;
+.menu__logo a img{
     width: 50px;
-    height: 50px;
+    height: auto;
+    margin-right: 10px;
 }
 
-.menu__link ul{
-    padding: 10px;
-    text-decoration: none;
-    list-style: none;
-    display: flex;
-}
-
-.menu__link ul li{
-    padding: 0 30px;
-    margin: 0 40px;
-    text-align: center;
-    font-weight: lighter;
-}
-
-.menu__link ul li:nth-child(3){
-    margin: -5px 40px !important;
-}
-
-.menu__link ul li:nth-child(1){
-    margin: -5px 40px !important;
-    text-align: left;
-}
-
-.menu__link ul li a:hover {
-    color: #7f8c8d;
-    transition: .3s
+a:hover{
+    color: grey !important;
 }
 
 .hamburger{
@@ -90,10 +63,6 @@ a{
 
 .overlay{
     display: none;
-}
-
-.active{
-    color: #7f8c8d;
 }
 
 @keyframes animationHeader{
@@ -266,50 +235,31 @@ a{
 /*FOOTER*/
 
 footer{
-    border: 1px solid black;
+    font-family: 'Open Sans', sans-serif;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1em;
+    padding: 10px 0px;
+    margin-top: 0px;
 }
 
-.foot__content{
+footer a {
+    color: black;
+}
+
+footer a img{
+    padding:15px;
+}
+
+.instagram__link{
     display: flex;
-    width: 90%;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 10px;
+    align-items: center;
 }
 
-.foot__bio{
-    width: 30%;
-}
-
-.foot__bio p {
-    font-size: .8em;
-}
-
-.foot__social{
-    margin: 10px 0;
-    width:20%;
-    text-align: center;
-    font-weight: bold;
-}
-
-.foot__logo{
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-}
-
-.foot__border{
-    border-radius: 50%;
-    border: 2px solid black;
-    padding: 10px;
-    width: 20px;
-    height: 20px;
-}
-
-.foot__logo img{
-    width: 20px;
-    height: 20px;
+.instagram__link img{
+    width: 35px;
+    height: auto;
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) { 
@@ -331,13 +281,9 @@ footer{
     margin-top: 0;
     padding: 15px;
     }
-    body, html, header{
-        width: auto;
-    }
 
-    .header{
-        display: flex;
-        justify-content: flex-end;
+    .container{
+        width:100%;
     }
 
     .menu__hamburger{
@@ -346,11 +292,12 @@ footer{
     z-index: 100;
     width: 100%;
     }
-    
-    header .header__contains{
+
+    nav{
         display: none;
     }
-    
+
+
         .hamburger {
             padding: 15px 15px;
             display: inline-block;
@@ -373,13 +320,13 @@ footer{
             .hamburger.is-active .hamburger-inner::before,
             .hamburger.is-active .hamburger-inner::after {
               background-color: #000; }
-          
+
           .hamburger-box {
             width: 40px;
             height: 24px;
             display: inline-block;
             position: relative; }
-          
+
           .hamburger-inner {
             display: block;
             top: 50%;
@@ -400,15 +347,15 @@ footer{
               top: -10px; }
             .hamburger-inner::after {
               bottom: -10px; }
-        
+
               .hamburger--3dy .hamburger-box {
                 perspective: 80px; }
-              
+
               .hamburger--3dy .hamburger-inner {
                 transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
                 .hamburger--3dy .hamburger-inner::before, .hamburger--3dy .hamburger-inner::after {
                   transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-              
+
               .hamburger--3dy.is-active .hamburger-inner {
                 background-color: transparent !important;
                 transform: rotateX(-180deg); }
@@ -416,12 +363,13 @@ footer{
                   transform: translate3d(0, 10px, 0) rotate(45deg); }
                 .hamburger--3dy.is-active .hamburger-inner::after {
                   transform: translate3d(0, -10px, 0) rotate(-45deg); }
-        
+
         .overlay{
+            /* border: #000 solid .5px; */
             border-radius: 4px;
             background: #FFF;
         }
-        
+
         .overlay-on{
             display: flex !important;
             transition: .5s;
@@ -433,21 +381,16 @@ footer{
             margin: 0 auto;
         }
 
-        .background{
-            background-size: cover;
-            background-attachment: initial;
-        }
-
         .menu__logo a{
             display: flex !important;
             flex-direction: column;
             margin: 0 auto;
-            line-height: 3.5em;
+            line-height: 2em;
         }
 
-        .menu__logo img{
-            width: 100px;
-            height: 100px;
+        .menu__logo a img{
+            width: 50px;
+            height: auto;
             margin: 0 auto;
         }
 
@@ -455,11 +398,11 @@ footer{
             margin: 0;
             font-size: 1.5em;
             margin-top: 10px;
-        }
-        
+        } 
+
         li{
             margin: 0 auto;
-            padding: 37px 45px;
+            padding: 30px 45px;
             font-size: 1em;
             text-align: center;
             text-transform: uppercase;
@@ -468,17 +411,9 @@ footer{
         li:hover{
             background: #7f8c8d;
         }
-        
+
         .overlay-content li {
             display: grid;
-        }
-
-        .first__presentation{
-            margin: 30px;
-        }
-
-        .first__text{
-            width: auto;
         }
 
         .change__container{
@@ -488,20 +423,5 @@ footer{
         .slider__button{
             width: auto;
             filter: none;
-        }
-
-        .foot__content{
-            justify-content: initial;
-            flex-direction: column-reverse;
-        }
-
-        .foot__social{
-            width: auto;
-        }
-
-        .foot__bio{
-            width: auto;
-            text-align: center;
-        }
-        
+        }   
     }
