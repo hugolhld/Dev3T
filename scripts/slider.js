@@ -20,6 +20,8 @@
               });
             }
 
+//Event for hamburger on
+
 let overlay = document.querySelector('.overlay')
  let hamburgerBtn = document.querySelector('.hamburger')
  let navContent = document.querySelector('ul')
@@ -41,88 +43,95 @@ let overlay = document.querySelector('.overlay')
 )
 
 class Slider {
-    constructor(selector, sliding)
-    {
-      this.slider = document.querySelector(selector)
-      this.sliding = sliding
-      this.currentPosition=0
-      this.sliderContainer
-      // pour savoir la largeur d'un item
-      this.sliderCardWidth=this.slider.querySelector('.slider__image').offsetWidth
-      // pour savoir combien il y a d'items
-      this.numberItems = this.slider.querySelectorAll('.slider__image').length
-  
-      this.arrowNext
-      this.arrowPrev
-      this.arrowNav
-  
-      this.init()
-  
-      this.hideArrow()
-      //this.filter()
-    }
-  
-    init()
-    {
-  
-      // ajout de la div intermédiaire
-      this.sliderContainer= document.createElement('div')
-      this.sliderContainer.classList.add('sliderContainer')
-      this.sliderContainer.style.width= this.numberItems*this.sliderCardWidth +'px'
-      this.sliderContainer.innerHTML = this.slider.innerHTML
-      this.slider.innerHTML= '';
-      this.slider.appendChild(this.sliderContainer)
-  
-      // ajout des fleches
-      this.arrowNav = document.createElement('div')
-      this.arrowNav.classList.add('arrowNav')
-      this.slider.appendChild(this.arrowNav)
-  
-      this.arrowNext = document.createElement('div')
-      this.arrowNext.classList.add('arrowRight')
-      this.arrowNav.appendChild(this.arrowNext)
-  
-      this.arrowPrev = document.createElement('div')
-      this.arrowPrev.classList.add('arrowLeft')
-      this.arrowNav.appendChild(this.arrowPrev)
-  
-      this.arrowNext.addEventListener('click',()=>
-      {
-        this.currentPosition = this.currentPosition + this.sliding
-        let toSlide = this.sliderCardWidth*this.currentPosition
-        this.sliderContainer.style.transform= 'translateX(-'+toSlide+'px)'
-        this.hideArrow()
-      })
-  
-      this.arrowPrev.addEventListener('click',()=>
-      {
-        this.currentPosition = this.currentPosition - this.sliding
-        let toSlide = this.sliderCardWidth*this.currentPosition
-        this.sliderContainer.style.transform= 'translateX(-'+toSlide+'px)'
-        this.hideArrow()
-      })
-    }
-  
-  hideArrow()
-    {
-      if(this.currentPosition==0)
-      {
-        this.arrowPrev.classList.remove('is-visible')
-      }
-      else{
-        this.arrowPrev.classList.add('is-visible')
-      }
-  
-      if(this.currentPosition+this.sliding>=this.numberItems){
-        this.arrowNext.classList.remove('is-visible')
-      }
-      else{
-        this.arrowNext.classList.add('is-visible')
-      }
-  
-    }
+  constructor(selector, sliding)
+  {
+    this.slider = document.querySelector(selector)
+    this.sliding = sliding
+    this.currentPosition=0
+    this.sliderContainer
+    // width of items
+    this.sliderCardWidth=this.slider.querySelector('.slider__image').offsetWidth
+    // how much items
+    this.numberItems = this.slider.querySelectorAll('.slider__image').length
+    this.items = this.slider.querySelectorAll('.slider__image')
+
+    this.arrowNext
+    this.arrowPrev
+    this.arrowNav
+
+    this.init()
+    this.hideArrow()
   }
-  //Litrer slider
+
+  init()
+  {
+
+    // div temporary
+    this.sliderContainer= document.createElement('div')
+    this.sliderContainer.classList.add('sliderContainer')
+    this.sliderContainer.style.width= ((this.numberItems/this.sliding) *100) +'%'
+    this.sliderContainer.innerHTML = this.slider.innerHTML
+    this.slider.innerHTML= '';
+    this.slider.appendChild(this.sliderContainer)
+
+    //width image
+    this.sliderCardWidth = ((100/ this.sliding)/(this.numberItems/this.sliding)) + '%'
+
+    // put arrow in slider
+    this.arrowNav = document.createElement('div')
+    this.arrowNav.classList.add('arrowNav')
+    this.slider.appendChild(this.arrowNav)
+
+    this.arrowNext = document.createElement('div')
+    this.arrowNext.classList.add('arrowRight')
+    this.arrowNav.appendChild(this.arrowNext)
+
+    this.arrowPrev = document.createElement('div')
+    this.arrowPrev.classList.add('arrowLeft')
+    this.arrowNav.appendChild(this.arrowPrev)
+
+  
+
+    this.arrowNext.addEventListener('click',()=>
+    {
+      this.goTo(this.currentPosition + this.sliding)
+      this.hideArrow()
+    })
+
+    this.arrowPrev.addEventListener('click',()=>
+    {
+      this.goTo(this.currentPosition - this.sliding)
+      this.hideArrow()
+    })
+
+    
+  }
+      goTo (index){
+        let translateX = index * -100 / this.numberItems
+        this.sliderContainer.style.transform = 'translate3d(' + translateX + '%, 0, 0)'
+        this.currentPosition = index
+      }
+
+hideArrow()
+  {
+    if(this.currentPosition==0)
+    {
+      this.arrowPrev.classList.remove('is-visible')
+    }
+    else{
+      this.arrowPrev.classList.add('is-visible')
+    }
+
+    if(this.currentPosition+this.sliding>=this.numberItems){
+      this.arrowNext.classList.remove('is-visible')
+    }
+    else{
+      this.arrowNext.classList.add('is-visible')
+    }
+
+  }
+}
+  //Class for chnage slider on click
 
   class Filter{
     constructor()
@@ -173,12 +182,13 @@ class Slider {
   }
   
   let myFilter = new Filter()
-  
-  scroll()
+
+// Function for heeader go fixed  
+
+scroll()
 const header = document.querySelector('header')
   function scroll(){
     window.addEventListener('scroll', ()=>{
-      console.log(window.pageYOffset)
       if(window.pageYOffset > header.clientHeight){
         header.style.position = 'fixed'
         header.style.animation ='animationHeader .3s'

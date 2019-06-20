@@ -71,7 +71,7 @@ a:hover{
     background: url(../images/Accueil/ac_photo_cr.jpg) no-repeat fixed center ;
     background-size: cover;
 }
-/* Main */ 
+/* Main */
 
 
 .first__text{
@@ -125,10 +125,12 @@ a:hover{
 .object{
     width: 23.23%;
     margin: 45px;
+    filter: grayscale(100%);
 }
 
 .object:hover{
     transform: scale(1.2);
+    filter: grayscale(0);
     transition: .4s ease-in;
 }
 
@@ -169,16 +171,11 @@ footer a img{
     height: auto;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) { 
+@media screen and (min-width: 320px) and (max-width: 768px) {
 
     body, html, header{
         height: 95%;
         width: auto;
-    }
-
-    header{
-        display: flex;
-        justify-content: flex-end;
     }
 
     .menu__hamburger{
@@ -188,11 +185,12 @@ footer a img{
     z-index: 100;
     width: 100%;
     }
-    
+
     nav{
         display: none;
     }
-    
+
+
         .hamburger {
             padding: 15px 15px;
             display: inline-block;
@@ -215,13 +213,13 @@ footer a img{
             .hamburger.is-active .hamburger-inner::before,
             .hamburger.is-active .hamburger-inner::after {
               background-color: #000; }
-          
+
           .hamburger-box {
             width: 40px;
             height: 24px;
             display: inline-block;
             position: relative; }
-          
+
           .hamburger-inner {
             display: block;
             top: 50%;
@@ -242,15 +240,15 @@ footer a img{
               top: -10px; }
             .hamburger-inner::after {
               bottom: -10px; }
-        
+
               .hamburger--3dy .hamburger-box {
                 perspective: 80px; }
-              
+
               .hamburger--3dy .hamburger-inner {
                 transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
                 .hamburger--3dy .hamburger-inner::before, .hamburger--3dy .hamburger-inner::after {
                   transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-              
+
               .hamburger--3dy.is-active .hamburger-inner {
                 background-color: transparent !important;
                 transform: rotateX(-180deg); }
@@ -258,13 +256,13 @@ footer a img{
                   transform: translate3d(0, 10px, 0) rotate(45deg); }
                 .hamburger--3dy.is-active .hamburger-inner::after {
                   transform: translate3d(0, -10px, 0) rotate(-45deg); }
-        
+
         .overlay{
             /* border: #000 solid .5px; */
             border-radius: 4px;
             background: #FFF;
         }
-        
+
         .overlay-on{
             display: flex !important;
             transition: .5s;
@@ -281,7 +279,7 @@ footer a img{
             background-attachment: initial;
         }
 
-        .menu__logo a{
+        /* .menu__logo a{
             display: flex !important;
             flex-direction: column;
             margin: 0 auto;
@@ -298,8 +296,8 @@ footer a img{
             margin: 0;
             font-size: 1.5em;
             margin-top: 10px;
-        }
-        
+        } */
+
         li{
             margin: 0 auto;
             padding: 37px 45px;
@@ -311,7 +309,7 @@ footer a img{
         li:hover{
             background: #7f8c8d;
         }
-        
+
         .overlay-content li {
             display: grid;
         }
@@ -350,5 +348,5 @@ footer a img{
             width: auto;
             text-align: center;
         }
-        
+
      }
