@@ -92,6 +92,7 @@ a:hover{
     font-size:.9em;
     justify-content: flex-start;
     padding-top: 7px;
+    z-index: 1000;
 }
 
 #contact a img{
@@ -120,6 +121,7 @@ a:hover{
     left: 25%;
     padding: 10px;
     cursor: pointer;
+    z-index: 1;
 }
 
 #contact__border::before, 
@@ -202,6 +204,7 @@ footer a:hover{
 .instagram__link img{
     width: 35px;
     height: auto;
+    padding-right: 10px;
 }
 
 @media screen and (min-width: 375px) and (max-width: 768px) { 
@@ -335,6 +338,8 @@ footer a:hover{
             margin-top: 10px;
         } 
 
+
+
         li{
             margin: 0 auto;
             padding: 30px 45px;
@@ -366,6 +371,10 @@ footer a:hover{
             width : 40%;
             padding: 10px;
             border: none;
+        }
+
+        #contact__border::before,#contact__border::after {
+            display : none;}
         }
 
         footer{
