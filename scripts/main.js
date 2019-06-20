@@ -1,4 +1,4 @@
- /**
+/**
              * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
              *
              * @private
@@ -13,19 +13,21 @@
           
             var hamburgers = document.querySelectorAll(".hamburger");
             if (hamburgers.length > 0) {
-              forEach(hamburgers, function(hamburger) {
+                forEach(hamburgers, function(hamburger) {
                 hamburger.addEventListener("click", function() {
-                  this.classList.toggle("is-active");
+                    this.classList.toggle("is-active");
                 }, false);
-              });
+                });
             }
- 
+
+
  let i = 0,text
  text = 'Je m’appelle Cannelle Robert, j’ai 20 ans et je suis actuellement étudiante à l’école ESMA (École Supérieure des Métiers Artistiques) à Nantes. Je suis dans la filière “Cinéma d’animations 3D effets spéciaux” de cette école. Dans ce portfolio, vous trouverez tous mes travaux réalisées lors de ma première année d\'études.'
  let overlay = document.querySelector('.overlay')
  let hamburgerBtn = document.querySelector('.hamburger')
  let navContent = document.querySelector('ul')
  let overContent = document.querySelector('.overlay-content') 
+ let hamburgerDivP = document.querySelector('.menu__hamburger p')
  let footLogo = document.querySelector('footer a img')
  let headerBackground = document.querySelector('.background')
  overContent.innerHTML = navContent.innerHTML
@@ -78,11 +80,12 @@ hamburgerBtn.addEventListener(
     function(){
         if(overlay.classList.contains("overlay-on")){
             overlay.classList.remove('overlay-on')
+  
         }
         else{
             overlay.classList.add('overlay-on')
         }
     }
-)
+  )
 
 

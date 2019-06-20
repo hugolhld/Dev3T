@@ -21,6 +21,7 @@ header{
 }
 
 a{
+    color: black;
     text-decoration: none;
 }
 
@@ -40,14 +41,14 @@ a{
     color:black;
 }
 
-.menu__logo{
+.menu__logo a{
     display: flex;
     font-weight: 500;
     text-transform: uppercase;
     align-items: center;
 }
 
-.menu__logo img{
+.menu__logo a img{
     width: 50px;
     height: auto;
     margin-right: 10px;
@@ -175,7 +176,7 @@ footer a img{
         width: auto;
     }
 
-    .header{
+    header{
         display: flex;
         justify-content: flex-end;
     }
@@ -188,7 +189,7 @@ footer a img{
     width: 100%;
     }
     
-    header .header__contains{
+    nav{
         display: none;
     }
     
@@ -287,7 +288,7 @@ footer a img{
             line-height: 3.5em;
         }
 
-        .menu__logo img{
+        .menu__logo a img{
             width: 100px;
             height: 100px;
             margin: 0 auto;
