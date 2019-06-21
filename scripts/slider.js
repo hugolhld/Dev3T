@@ -29,6 +29,7 @@ let overlay = document.querySelector('.overlay')
  let hamburgerDivP = document.querySelector('.menu__hamburger p')
  let hamburgerDiv = document.querySelector('.menu__hamburger')
  let hamburgerDivImg = document.querySelector('.hamburger__image')
+ let footLogo = document.querySelector('footer a img')
  overContent.innerHTML = navContent.innerHTML
 
  hamburgerBtn.addEventListener(
@@ -46,6 +47,14 @@ let overlay = document.querySelector('.overlay')
       }
   }
 )
+
+footLogo.addEventListener('mouseover', ()=>{
+  footLogo.src = ('images/instagram_2.svg')
+})
+
+footLogo.addEventListener('mouseout', ()=>{
+  footLogo.src = ('images/instagram_1.svg')
+})
 
 class Slider {
   constructor(selector, sliding)

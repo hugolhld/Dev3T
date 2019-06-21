@@ -54,6 +54,7 @@ a{
 
 a:hover{
     color: grey !important;
+    transition: .3s;
 }
 
 .hamburger{
@@ -124,15 +125,15 @@ a:hover{
     z-index: 1;
 }
 
-#contact__border::before, 
-#contact__border::after { 
-    border: solid 4px black;
-    background: transparant;
+#contact__border::before,
+#contact__border::after {
+    border: solid 4px black; 
+    background: transparent;
     content: '';
     height: 0;
     opacity: 0;
     position: absolute;
-    width: 0; 
+    width: 0;
 }
 
 #contact__border::before {
@@ -157,16 +158,16 @@ a:hover{
     width: 100%;
 }
 
-#contact__border:hover::before { 
-    transition: opacity 0s 0s, width .1s 0s, height .1s .1s; 
+#contact__border:hover::before {
+    transition: opacity 0s 0s, width .1s 0s, height .1s .1s;
 }
 
-#contact__border::after { 
-    transition: opacity 0s .2s, width .1s .1s, height .1s 0s; 
+#contact__border::after {
+    transition: opacity 0s .2s, width .1s .1s, height .1s 0s;
 }
 
-#contact__border:hover::after { 
-    transition: opacity 0s .2s, width .1s .2s, height .1s .3s; 
+#contact__border:hover::after {
+    transition: opacity 0s .2s, width .1s .2s, height .1s .3s;
 }
 
 
@@ -209,8 +210,8 @@ footer a:hover{
     padding-right: 10px;
 }
 
-@media screen and (min-width: 375px) and (max-width: 768px) { 
-    
+@media screen and (min-width: 375px) and (max-width: 768px) {
+
     .container{
         width:100%;
     }
@@ -341,7 +342,7 @@ footer a:hover{
             margin: 0;
             font-size: 1.5em;
             margin-top: 10px;
-        } 
+        }
 
 
 
@@ -401,5 +402,5 @@ footer a:hover{
         #footer__insta__responsive img{
             padding: 0;
         }
- 
+
     }
