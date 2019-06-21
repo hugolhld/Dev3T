@@ -54,6 +54,7 @@ a{
 
 a:hover{
     color: grey !important;
+    transition: .3s;
 }
 
 .hamburger{
