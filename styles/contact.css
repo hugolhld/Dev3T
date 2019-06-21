@@ -134,7 +134,7 @@ a:hover{
 /* Box Borders */
 #contact__border::before,
 #contact__border::after {
-    background: transparant;
+    background: transparent;
     content: '';
     height: 0;
     opacity: 0;
